@@ -1,0 +1,50 @@
+<html>
+<head>
+	<title>Options for Bugzilla Agile</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://jquery-json.googlecode.com/files/jquery.json-1.3.min.js"></script>
+	<script type="text/javascript" src="options.js"></script>
+	<script type="text/javascript" src="popup.js"></script>
+	<link rel="stylesheet" type="text/css" media="screen" href="options.css" />
+</head>
+<body onload="loadOptions()">
+	<h1>Bugzilla Config</h1>
+	<h2>User</h2>
+	<span class="configSection"><label class="bugLabel" for="username">Bugzilla Username:</label><input id="username" type="email" /></span>
+	<h2>Target Milestone</h2>
+	<span class="configSection"><label class="bugLabel" for="useSprint">Use sprints?</label><input type="checkbox" id="useSprint" onclick="changeUseSprint()"/></span>
+	<span class="hidden configSection" id="sprintSpan"><label class="bugLabel" for="sprint">Sprint Number:</label><input id="sprint" type="number" min="0" max="100" step="1" /></span>
+
+	<h2>Association</h2>
+	<div id="association">
+	<span class="configSection"><input type="checkbox" id="assignedTo" /><label for="assignedTo">Assigned To</label></span>
+	<span class="hidden configSection"><input type="checkbox" id="owner" /><label for="owner">Owner</label></span>
+	<span class="hidden configSection"><input type="checkbox" id="needinfo" /><label for="needinfo">Need Info</label></span>
+	</div>
+
+	<h1>Extension Config</h1>
+	<h2>Display</h2>
+	<span class="configSection"><label class="extLabel" for="refresh">Refresh Time <span class="small">(min)</span>:</label><input id="refresh" type="number" min="1" max="60" step="1" /></span>
+	<span class="configSection"><label class="extLabel" for="color">Badge color:</label>
+	<select id="color">
+		<option value="blue">Blue</option>
+		<option value="red">Red</option>
+		<option value="green">Green</option>
+		<option value="yellow">Yellow</option>
+	</select></span>
+	<h2>Status Filter</h2>
+	<div id="statusFilterSpan">
+	<span class="configSection"><input type="checkbox" id="new" /><label for="new">NEW</label></span>
+	<span class="configSection"><input type="checkbox" id="assigned" /><label for="assigned">ASSIGNED</label></span>
+	<span class="configSection"><input type="checkbox" id="modified" /><label for="modified">MODIFIED</label></span>
+	<span class="configSection"><input type="checkbox" id="ondev" /><label for="ondev">ON_DEV</label></span>
+	<span class="configSection"><input type="checkbox" id="onqa" /><label for="onqa">ON_QA</label></span>
+	<span class="configSection"><input type="checkbox" id="verified" /><label for="verified">VERIFIED</label></span>
+	<span class="configSection"><input type="checkbox" id="releasepending" /><label for="releasepending">RELEASE_PENDING</label></span>
+	<span class="configSection"><input type="checkbox" id="post" /><label for="post">POST</label></span>
+	<span class="configSection"><input type="checkbox" id="closed" /><label for="closed">CLOSED</label></span>
+	</div>
+	<button onclick="saveOptions()">Save</button>
+	<button onclick="loadOptions()">Reset</button>
+</body>
+</html>

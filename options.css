@@ -1,0 +1,61 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	padding: 10px;
+}
+
+h1 {
+	font-size: 24pt;
+	text-align: center;
+	border: 0px solid #000;
+	border-bottom-width: 1px;
+	padding: 5px 0px;
+}
+
+h2 {
+	padding: 10px 0px;
+}
+
+label {
+	padding: 0px 10px;
+}
+
+.configSection {
+	padding: 3px 0px;
+	display: block;
+}
+
+#association {
+	margin-left: 20px;
+}
+
+#association .configSection {
+	padding: 1px 0px;
+}
+
+#statusFilterSpan {
+	margin-bottom: 15px;
+	margin-left: 20px;
+}
+
+#statusFilterSpan .configSection {
+	padding: 1px 0px;
+}
+
+.bugLabel, .extLabel {
+	display: inline-block;
+	width: 150px;
+	text-align: right;
+}
+
+.small {
+	font-size: 10pt;
+}
+
+.hidden {
+	display: none;
+}
+

@@ -1,0 +1,7 @@
+This is a simple chrome plugin that adds a counter for "sprint" related bugs
+
+Features
+- Change color counter
+- Filter by status
+- Refresh time
+- Optional sprint status
